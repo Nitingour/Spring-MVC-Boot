@@ -20,6 +20,10 @@ public class EmpService {
 		return x;
 	}
 
+	public Iterable<Employee> getAllEmp() {
+		return empdao.findAll();//select * from Employee
+	}
+
 	
 	
 }

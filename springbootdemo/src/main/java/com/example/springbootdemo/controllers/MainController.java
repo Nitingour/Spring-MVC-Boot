@@ -14,7 +14,7 @@ public class MainController {
 @Autowired
 	EmpService empservice;
 
-	@RequestMapping("/hello")
+	@RequestMapping("/")
 	public ModelAndView hello()
 	{System.out.println("inside Back Controller....");
 		ModelAndView mv=new ModelAndView("hello");
@@ -36,6 +36,17 @@ public class MainController {
 	}
 	
 	
+	@RequestMapping("/view")
+	public ModelAndView view()
+	{
+		ModelAndView mv=new ModelAndView("view");
+		
+		Iterable<Employee> list=empservice.getAllEmp();
+		System.out.println("LIST>>>>"+list);
+		mv.addObject("LIST",list);
+		return mv;
+		
+	}
 	
 	
 }

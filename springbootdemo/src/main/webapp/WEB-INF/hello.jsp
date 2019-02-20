@@ -11,4 +11,7 @@ Salary   <input type="text" name="salary" />
 
 </form>
 </pre>
+
+<a href="/view">View All Emps</a>
+
 </center>
